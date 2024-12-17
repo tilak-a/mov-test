@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .myvid1 {
+      width: 10rem;
+      height: 10rem;
+    }
+  </style>
+  <body>
+    <p>This is mov</p>
+    <video
+      data-planet="Sun"
+      playsinline
+      autoplay
+      loop
+      muted
+      class="myvid1"
+      id="sunVideo"
+    >
+      <source src="earthouputold.mov" type="video/quicktime" />
+    </video>
+
+    <p>This is mov output</p>
+    <video
+      data-planet="Sun"
+      playsinline
+      autoplay
+      loop
+      muted
+      class="myvid1"
+      id="sunVideo"
+    >
+      <source src="output.mov" type="video/quicktime" />
+    </video>
+  </body>
+</html>
