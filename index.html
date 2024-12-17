@@ -11,6 +11,37 @@
       width: 10rem;
       height: 10rem;
     }
+
+    video {
+      /* Remove default background */
+      background: transparent;
+      mix-blend-mode: screen;
+      /* For Safari */
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      /* For better compatibility across browsers */
+      mask-image: radial-gradient(white, black);
+    }
+    /* @supports (-webkit-touch-callout: none) {
+        .myvid1 {
+          mix-blend-mode: normal;
+        }
+      } */
+    video::-webkit-media-controls,
+    video::-webkit-media-controls-enclosure,
+    video::-webkit-media-controls-panel,
+    video::-webkit-media-controls-overlay-play-button,
+    video::-webkit-media-controls-play-button,
+    video::-webkit-media-controls-start-playback-button {
+      display: none !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+    }
+
+    /* Ensure video plays on iOS */
+    video[playsinline] {
+      -webkit-playsinline: true;
+      playsinline: true;
+    }
   </style>
   <body>
     <p>This is mov</p>
@@ -39,7 +70,7 @@
       <source src="output2.mov" type="video/quicktime" />
     </video>
 
-    <p>This is mov output videoo 4</p>
+    <p>This is mov output videoo 5</p>
     <video
       data-planet="Sun"
       playsinline
@@ -49,7 +80,7 @@
       class="myvid1"
       id="sunVideo"
     >
-      <source src="output4.mov" type="video/quicktime" />
+      <source src="output5.mov" type="video/quicktime" />
     </video>
   </body>
 </html>
